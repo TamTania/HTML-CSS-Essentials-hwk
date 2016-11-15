@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Form</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            fieldset {
+                border: 1px solid grey;
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+
+            label {
+                width: 150px;
+                display: inline-block;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+    	    <div id="main">
+    		    <div id="container">
+    			    <div id="content" role="main">
+
+                       	<header>
+                       		<h1>Order Form</h1> 
+                       	</header>
+
+                        <form method="POST"> 
+
+                        	<!--General info: start-->
+                        	<div>
+	                        	<fieldset> 
+	                        	<legend>General info</legend>
+	                        	<label for="email"> Email </label>
+	                        	<input id="email" type="email" name="email" placeholder="your@email.com" required /> 
+	                        	<br>
+	                        	<label for="login"> Login </label>
+	                        	<input id="login" type="text" name="login" placeholder="Login" pattern="[A-Za-z1-3]" required />
+	                        	<br> 
+	                        	<label for="password"> Password </label>
+	                        	<input id="password" type="password" name="password" placeholder="Password" required /> 
+	                        	</fieldset>
+                        	</div>
+                        	<!--General info: end-->
+
+                        	<!--User info: start-->
+                        	<div>
+	                        	<fieldset> 
+	                        	<legend>User info</legend>
+	                        	<label for="first"> First Name </label>
+	                        	<input id="first" type="text" name="first" placeholder="John" pattern="[A-Za-z]" required /> 
+	                        	<br>
+	                        	<label for="second"> Second Name </label>
+	                        	<input id="second" type="text" name="second" placeholder="Doe" pattern="[A-Za-z]" required />
+	                        	<br> 
+	                        	<label for="checkbox"> Gender </label>
+	                        	Male
+	                        	<input id="checkbox" type="checkbox" value="male" checked /> Female 
+	                        	<input type="checkbox" value="female"  />
+	                        	<br>
+	                        	<label for="age"> Age </label>
+	                        	<input id="age" type="number" name="age" placeholder="32" disabled />
+	                        	<br>
+	                        	<label for="about"> About me </label>
+	                        	<textarea id="about" rows="5" cols="20" name="about" readonly></textarea>
+	                        	</fieldset>
+                        	</div>
+                        	<!--User info: end-->
+
+                        	<!--Order info: start-->
+                        	<div>
+	                        	<fieldset>
+	                        	<legend> Order Info </legend>
+	                        	<label for="product"> Product </label>
+	                        	<select id="product" name="product">
+	                        		<option value="iPhone"> iPhone </option>
+	                        		<option value="iPad"> iPad </option>
+	                        		<option value="iPod"> iPod </option>
+	                        	</select>
+	                        	<br>
+	                        	<label for="radio"> Front Color </label>
+	                        	Black
+	                        	<input id="radio" type="radio" name="color" value="black" checked />Pink
+	                        	<input type="radio" name="color" value="pink" />Gold
+	                        	<input type="radio" name="color" value="gold" />
+	                        	<br>
+	                        	<label for="color"> Back-side Color </label>
+	                        	<input id="color" type="color" name="backcolor" />
+	                        	<br>
+	                        	<label for="amount"> Amount </label>
+	                        	<input id="amount" type="number" name="amount" placeholder="5" required />
+	                        	<br>
+	                        	<label for="delivery"> Delivery Date </label>
+	                        	<input id="delivery" type="date" name="delivery" required />
+	                        	</fieldset>
+                        	</div>
+                        	<!--Order info: end-->
+
+                        	<div>
+								<input type="reset" value="Reset">
+								<input type="submit" value="Submit">
+							</div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
